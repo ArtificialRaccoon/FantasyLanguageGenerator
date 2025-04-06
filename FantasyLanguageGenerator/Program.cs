@@ -35,13 +35,16 @@ class Program
 
                 case "--translate":
                 case "-t":
-                    if (i + 2 < args.Length)
+                    if (i + 3 < args.Length)
                     {
+                        string languagefile = args[i + 1];
+                        i++;
                         string sourceTextfile = args[i + 1];
                         i++;
                         string outputTextfile = args[i + 1];
                         i++;
 
+                        Language.LoadLanguage(languagefile);
                         string translation = Translator.Translate(File.ReadAllText(sourceTextfile));
                         Console.WriteLine(string.Format("Translation:{0}{1}{0}", Environment.NewLine, translation));
                         File.WriteAllText(outputTextfile, translation);
@@ -49,6 +52,7 @@ class Program
                     }
                     else
                         Console.WriteLine("Error: No text file provided for translation.");
+                        Environment.Exit(1); 
                     break; 
 
                 case "--help":
@@ -76,7 +80,7 @@ class Program
         Console.WriteLine("Examples:");
         Console.WriteLine("  FantasyLanguageGenerator                        Generate 'language.json' in the current directory");
         Console.WriteLine("  FantasyLanguageGenerator -g output.json         Generate language file as 'output.json'");
-        Console.WriteLine("  FantasyLanguageGenerator -t input.txt output.txt");
+        Console.WriteLine("  FantasyLanguageGenerator -t language.json input.txt output.txt");
         Console.WriteLine("                                                  Translate input.txt and save the result to output.txt");
         Console.WriteLine("  FantasyLanguageGenerator -g output.json -t input.txt output.txt");
         Console.WriteLine("                                                  Generate 'output.json' and translate input.txt to output.txt");

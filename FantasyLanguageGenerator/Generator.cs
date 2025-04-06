@@ -235,7 +235,7 @@ namespace FantasyLanguageGenerator
                 Language.Translations["Roots"].Add(root, generatedFantasyWord);
             }                             
 
-            SaveTranslationsToJson(outputFilePath, Language.Translations);
+            Language.SaveLanguage(outputFilePath);
         }
 
         /// <summary>
@@ -260,16 +260,6 @@ namespace FantasyLanguageGenerator
             Consonants = jsonData["Consonants"]?.ToObject<List<string>>() ?? new();
             SyllablePatterns = jsonData["SyllablePatterns"]?.ToObject<Dictionary<string, int>>() ?? new();
             ConsonantPairWeights = jsonData["ConsonantPairWeights"]?.ToObject<Dictionary<string, int>>() ?? new();
-        }
-
-        /// <summary>
-        /// Saves the generated language to a JSON file.
-        /// </summary>
-        /// <param name="filePath">The output path to the generated json</param>
-        /// <param name="translations">The translations for the suffixes, prefixes, and roots.</param>
-        private static void SaveTranslationsToJson(string filePath, Dictionary<string, BidirectionalMap<string, string>> translations)
-        {
-            File.WriteAllText(filePath, JsonConvert.SerializeObject(translations, Formatting.Indented));
         }
     }
 }
