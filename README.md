@@ -18,6 +18,23 @@ A very simple fantasy language generator.  Language generation can be configured
 
 **ConsonantPairWeights** - A list of consonant pairs you wish to permit in your fantasy language.  Each has a assocaited weight for how common they should occour.
 
+### Usage
+
+```
+Usage:
+  [no arguments]                     Generate a fantasy language JSON file named 'language.json'
+  -g, --generate <file>              Generate a fantasy language JSON file at the specified path
+  -t, --translate <input> <output>   Translate an English text file and save to the output file
+  -h, --help                         Show this help information
+
+Examples:
+  FantasyLanguageGenerator                        Generate 'language.json' in the current directory
+  FantasyLanguageGenerator -g output.json         Generate language file as 'output.json'
+  FantasyLanguageGenerator -t language.json input.txt output.txt
+                                                  Translate input.txt and save the result to output.txt
+  FantasyLanguageGenerator -g output.json -t input.txt output.txt
+                                                  Generate 'output.json' and translate input.txt to output.txt
+```
 
 ## Example Input:
 
