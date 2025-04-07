@@ -4,19 +4,19 @@ A very simple fantasy language generator.  Language generation can be configured
 
 ### Configuration Parameters
 
-**Prefixes** - A list of prefixes in the source language.  For example, "over", "under", "anti", etc.
+- **Prefixes** - A list of prefixes in the source language.  For example, "over", "under", "anti", etc.
 
-**Suffixes** - A list of suffixes in the source language.  For example, "ing", "ize", "er", etc.
+- **Suffixes** - A list of suffixes in the source language.  For example, "ing", "ize", "er", etc.
 
-**Roots** - A list of root words in the source language.  For example, "run", "dragon", "water". etc.
+- **Roots** - A list of root words in the source language.  For example, "run", "dragon", "water". etc.
 
-**Vowels** - A list of characters you wish to define as vowels in your fantasy language.  The first five are considered the base/most common vowels.
+- **Vowels** - A list of characters you wish to define as vowels in your fantasy language.  The first five are considered the base/most common vowels.
 
-**Consonants** - A list of characters you wish to define as consonants in your fantasy language. 
+- **Consonants** - A list of characters you wish to define as consonants in your fantasy language. 
 
-**SyllablePatterns** - A list of consonant and vowels patterns defined in your fantasy language.  Each has an associated weight for how common they should occour.
+- **SyllablePatterns** - A list of consonant and vowels patterns defined in your fantasy language.  Each has an associated weight for how common they should occour.
 
-**ConsonantPairWeights** - A list of consonant pairs you wish to permit in your fantasy language.  Each has a assocaited weight for how common they should occour.
+- **ConsonantPairWeights** - A list of consonant pairs you wish to permit in your fantasy language.  Each has a assocaited weight for how common they should occour.
 
 ### Usage
 
