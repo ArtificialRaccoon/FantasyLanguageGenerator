@@ -48,6 +48,15 @@ class Program
                         string translation = Translator.Translate(File.ReadAllText(sourceTextfile));
                         Console.WriteLine(string.Format("Translation:{0}{1}{0}", Environment.NewLine, translation));
                         File.WriteAllText(outputTextfile, translation);
+
+                        if(Language.UntranslatedWords.Count > 0)
+                        {
+                            File.AppendAllText(outputTextfile, Environment.NewLine + "Untranslated Words:" + Environment.NewLine);
+                            File.AppendAllText(outputTextfile, Environment.NewLine + "[");                            
+                            File.AppendAllText(outputTextfile, string.Join(",", Language.UntranslatedWords.Select(word => string.Format("\"{0}\"", word))));
+                            File.AppendAllText(outputTextfile, "]");
+                        }
+
                         Console.WriteLine(string.Format("Translation saved to {0}", outputTextfile));
                     }
                     else
@@ -82,7 +91,7 @@ class Program
         Console.WriteLine("  FantasyLanguageGenerator -g output.json         Generate language file as 'output.json'");
         Console.WriteLine("  FantasyLanguageGenerator -t language.json input.txt output.txt");
         Console.WriteLine("                                                  Translate input.txt and save the result to output.txt");
-        Console.WriteLine("  FantasyLanguageGenerator -g output.json -t input.txt output.txt");
+        Console.WriteLine("  FantasyLanguageGenerator -g output.json -t output.json input.txt output.txt");
         Console.WriteLine("                                                  Generate 'output.json' and translate input.txt to output.txt");
         Console.WriteLine(); 
     }

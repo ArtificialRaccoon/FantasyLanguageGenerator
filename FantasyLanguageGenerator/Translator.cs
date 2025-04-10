@@ -73,8 +73,11 @@ namespace FantasyLanguageGenerator
 
             //No possible translation found, return the original word.
             if (bestScore == -1)
+            {
+                Language.UntranslatedWords.Add(input);
                 return input;
-
+            }
+            
             //Build the translated word
             string translatedPrefix = bestPrefix != "" ? FindTranslation("Prefixes", bestPrefix) : "";
             string translatedRoot = FindTranslation("Roots", bestRoot);

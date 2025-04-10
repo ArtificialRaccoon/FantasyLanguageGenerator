@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace FantasyLanguageGenerator
 {
@@ -9,6 +10,8 @@ namespace FantasyLanguageGenerator
         /// Translation dictionary for the source language (English) to the target language.
         /// </summary>
         public static Dictionary<string, BidirectionalMap<string, string>> Translations = new Dictionary<string, BidirectionalMap<string, string>>();
+
+        public static HashSet<string> UntranslatedWords = new HashSet<string>();
 
         /// <summary>
         /// Static Constructor to initialize the Translations dictionary.

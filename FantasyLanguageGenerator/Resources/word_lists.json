@@ -1,7 +1,11 @@
 {
     "Prefixes": ["un", "re", "dis", "pre", "in", "im", "over", "under", "sub", "mis", "anti", "auto", "co", "pro", "trans", "inter", "en", "de", "ex", "non"],
     "Suffixes": ["ing", "ed", "s", "d", "ly", "ness", "ful", "able", "less", "ment", "tion", "ism", "ist", "ize", "ate", "ous", "ive", "er", "or", "ity", "hood", "self", "ship", "selves", "dom", "ped"],
-    "Roots": [
+    "Roots": ["an","sang","dyad","wak","zephyr","spoke","cloud","timbre","sky","existence","bade","equal","ignore",
+    "advance","dance","freeze","thaw","grew","jealous","pair","desire","anger","loneliness","storm","birth","embraced",
+    "kindred","dance","above","summon","rain","creat","create","wave","tall","touch","feet","twirl","across","heaven",
+    "closer","could","calm","chaos","angry","had","disturb","took","seduce","refrain","lightn","rain","sought","splitting",
+    "rais","earth","turbulent","wake","pluck","his","cast","moon","descend","gave","dying","he","stone","mountain",
     "a", "ability", "able", "about", "account", "act", "action", "activity", "add", "address", "administration", 
     "adult", "affect", "after", "age", "agency", "agent", "agree", "agreement", "air", "allow", "alone", "along", 
     "already", "also", "although", "always", "among", "amount", "and", "analysis", "animal", "answer", "appearance", "approach", 
